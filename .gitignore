@@ -1,3 +1,5 @@
 venv/
 
 credentials.py
+
+credentials.json
