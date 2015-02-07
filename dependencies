@@ -1,8 +1,0 @@
-commands for flask:
-droplet
-virtualenv venv
-. venv/bin/activate
-python test.py
-
-
-need to install flask and dropbox and other packages on the virtual environmet
