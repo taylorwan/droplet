@@ -22,10 +22,10 @@ class Commands(object):
         
         sms = "Folders: "
         for directory in directories:
-            sms += "\n" + directory
-        sms += "\n\nFiles: "
+            sms += " " +  directory
+        sms += " |  Files: "
         for document in documents:
-            sms += "\n" + document
+            sms += " " + document
             
         return sms
     
@@ -48,7 +48,7 @@ class Commands(object):
             print "It seems that something has gone wrong!"
         print "File " + fileName + " created!"
     
-		def getFile(self, arrayOfCommand, client):
+    def getFile(self, arrayOfCommand, client):
         return ""
 
     def makeFolder(self, arrayOfCommand, client):
@@ -152,13 +152,13 @@ class Commands(object):
 
     def shareFile(self, arrayOfCommand, client):
         fileName = arrayOfCommand[2].replace("\"","").replace("\'","")
-        receipient = arrayOfCommand[3]
+        #receipient = arrayOfCommand[3]
         path = presentWorkingDirectory + fileName
         if not fileInFolder( fileName, client ):
             return fileName + " doesn't exist in this folder!"
         shareData = client.share(path, short_url=True)
         shortURL = shareData['url']
-        return "Sent " + shortURL + " to " + receipient
+        return "Shareable link: " + shortURL
     
     def shareFolder(self, arrayOfCommand, client):
         folderName = arrayOfCommand[2].replace("\"","").replace("\'","")
@@ -168,7 +168,7 @@ class Commands(object):
             return folderName + " doesn't exist in this folder!"
         shareData = client.share(path, short_url=True)
         shortURL = shareData['url']
-        return "Sent " + shortURL + " to " + receipient
+        return "Shareable link: " + shortURL
     
     def getMostRecent(self, arrayOfCommand, client):
         arrayOfCommand.remove(arrayOfCommand[0])
@@ -306,8 +306,8 @@ def photo(path, client):
 def inputString():
     global arrayOfCommand
     phoneNumber = sys.argv[2]
-    f=open("vim.txt", "w")
-    f.write("we are at least in main") 
+    f=open("vim.txt", "a+")
+    f.write("here") 
     client = dropbox.client.DropboxClient(get_token(phoneNumber), locale=None, rest_client=None)
     f.write("now here")
     if len(sys.argv)>3:
@@ -341,10 +341,3 @@ def inputString():
 
 inputString()
 
-#def printAnything():
-#    print "anything"
-#printAnything()
-# DropboxClient(oauth2_access_token, locale=None, rest_client=None)
-
-# inputString("share folder derp with with to to taylor")
-# inputString("get tag derp")
