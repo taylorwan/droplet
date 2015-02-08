@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Droplet - Docs</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="droplet/style-main.css">
+</head>
+
+<body class="docs">
+	<aside class="sidenav">
+		<a href="index.html" class="logo">
+			<span class="title">Droplet</span>
+			<img src="droplet/droplet-logo.png" />
+		</a>
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Docs</a></li>
+			<li><a href="droplet/oauth2.php">Setup</a></li>
+		</ul>
+	</aside>
+	<div class="container">
+		<ul>
+			<h1>DropDocs</h1>
+			<li>
+				<p class="title">Get File</p>
+				<div class="description">
+					<p>Returns the first 140 characters of a file.</p>
+					<p><span class="parameter">fileName</span> - path to the file from the root folder</p>
+				
+					<pre class="code"><code>
+						<span>get file myFile.txt</span>
+						<span>myFile.txt:<br>Locavore leggings quinoa biodiesel chia consequat. Shabby chic ullamco duis, stumptown next level Austin kale chips fingerstache chillwave.</span>
+					</code></pre>
+				</div>
+			</li>
+			<li>
+				<p class="title">Create File</p>
+				<div class="description">
+					<p>Creates a file with or without content.</p>
+					<p><span class="parameter">fileName</span> - path to the file from the root folder</p>
+					<p><span class="parameter">content <span class="optional">(optional)</span></span> - content for the file</p>
+				
+					<pre class="code"><code>
+						<span>add file HelloWorld.txt Hello, World!</span>
+						<span>get file HelloWorld.txt</span>
+						<span></span>
+						<span>File HelloWorld.txt created!</span>
+						<span>HelloWorld.txt:</span>
+						<span>Hello, World!</span>
+					</code></pre>
+				</div>
+			</li>
+			<li>
+				<p class="title">Delete File</p>
+				<div class="description">
+					<p>Remove a file from your Dropbox folder.</p>
+					<p><span class="parameter">fileName</span> - path to the file from the root folder</p>
+				
+					<pre class="code"><code>
+						<span>delete file HelloWorld.txt</span>
+						<span></span>
+						<span>HelloWorld.txt successfully deleted!</span>
+					</code></pre>
+				</div>
+			</li>
+			<li>
+				<p class="title">Create Folder</p>
+				<div class="description">
+					<p>Creates a folder.</p>
+					<p><span class="parameter">folderName</span> - path to the folder from the root folder</p>
+				
+					<pre class="code"><code>
+						<span>add folder MyDocs</span>
+						<span></span>
+						<span>Folder MyDocs created!</span>
+					</code></pre>
+				</div>
+			</li>
+			<li>
+				<p class="title">Delete Folder</p>
+				<div class="description">
+					<p>Remove a folder from your Dropbox folder.</p>
+					<p><span class="parameter">folderName</span> - path to the folder from the root folder</p>
+				
+					<pre class="code"><code>
+						<span>delete folder MyDocs</span>
+						<span></span>
+						<span>MyDocs successfully deleted!</span>
+					</code></pre>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>
