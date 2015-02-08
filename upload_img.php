@@ -59,6 +59,6 @@ exec($command, $output, $ret_code);
 fwrite($f, "** output: $output[0]");
 fclose($f);
 
-echo '<Response><Message>sdaljkfsadlkflksa' . $uri . " ** " . $path . $fn .  'test</Message></Response>';
+echo '<Response><Message>Success!</Message></Response>';
 
 ?>
