@@ -47,8 +47,8 @@ class Commands(object):
         if not fileCreated:
             print "It seems that something has gone wrong!"
         print "File " + fileName + " created!"
-
-    def getFile(self, arrayOfCommand, client):
+    
+		def getFile(self, arrayOfCommand, client):
         return ""
 
     def makeFolder(self, arrayOfCommand, client):
@@ -254,7 +254,6 @@ def searchFiles( fileName, client, path ):
         return -1
     for folder in folders:
         searchFiles( fileName, client, path+folder )
-
 
 def getFunctionCall(command):
     return {
