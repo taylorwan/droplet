@@ -1,5 +1,6 @@
 venv/
 
 credentials.py
-
+dbCredentials.php
 credentials.json
+numbersToTokens.txt
