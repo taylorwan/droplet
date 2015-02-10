@@ -1,5 +1,7 @@
 <?php
 
+//Handles text commands
+
 require_once "twilio_credentials.php";
 require "twilio-php-master/Services/Twilio.php";
      
