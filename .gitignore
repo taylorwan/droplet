@@ -1,4 +1,5 @@
 venv/
+testing/
 
 credentials.py
 dbCredentials.php
