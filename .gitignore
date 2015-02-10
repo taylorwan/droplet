@@ -4,3 +4,4 @@ credentials.py
 dbCredentials.php
 credentials.json
 numbersToTokens.txt
+twilio_credentials.php
